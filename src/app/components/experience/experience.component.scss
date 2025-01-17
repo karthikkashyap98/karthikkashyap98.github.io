@@ -1,0 +1,53 @@
+.parent {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding: var(--gutter);
+    align-items: flex-start;
+    height: 100vh;
+    background-color: var(--bg-darker);
+    color: var(--cream-muted);
+
+
+    h2 {
+        font-family: var(--jetbrains-font);
+    }
+
+    h3 {
+        font-family: var(--fire-font);
+    }
+
+}
+
+
+.timeline {
+    position: relative;
+    padding: 24px;
+    max-width: 800px;
+    // margin: 4rem auto;
+    padding: 2rem;
+}
+
+
+.timeline-item {
+    position: relative;
+    padding: 2rem 0;
+    padding-left: 2rem;
+    border-left: 2px solid var(--accent);
+    animation: fadein 1s ease-in-out;
+}
+
+@keyframes fadein {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.timeline-date {
+    color: var(--accent);
+    font-size: 0.9rem;
+}

@@ -1,0 +1,69 @@
+<!-- app-about.component.html -->
+
+<section class="about-section wrapper">
+    <!-- <h2>About.</h2> -->
+    <h2 class="about-title">About</h2>
+    <div class="about-tabs">
+        <div class="tab-buttons">
+            <button [class.active]="activeTab === 'skills'" (click)="switchTab('skills')">
+                Skills
+            </button>
+            <button [class.active]="activeTab === 'experience'" (click)="switchTab('experience')">
+                Experience
+            </button>
+            <button [class.active]="activeTab === 'education'" (click)="switchTab('education')">
+                Education
+            </button>
+        </div>
+
+        <div class="download-resume">
+            <button class="resume-btn" (click)="downloadResume()">
+                <i-feather name="download"></i-feather>
+                Download Resume
+            </button>
+        </div>
+    </div>
+
+    <div class="tab-content">
+        <!-- Skills Tab -->
+        <div class="skills-container" *ngIf="activeTab === 'skills'">
+            <div class="skills-grid">
+                <div class="skill-card" *ngFor="let skill of skills">
+                    <div class="skill-icon">
+                        <i-feather [name]="skill.icon"></i-feather>
+                    </div>
+                    <h3>{{skill.title}}</h3>
+                    <p class="description">{{skill.description}}</p>
+                    <div class="technologies">
+                        <span *ngFor="let tech of skill.technologies">{{tech}}</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Experience Tab -->
+        <div class="timeline-container" *ngIf="activeTab === 'experience'">
+            <div class="timeline">
+                <div class="timeline-item" *ngFor="let item of timeline">
+                    <div class="timeline-content">
+                        <h3>{{item.role}}</h3>
+                        <p class="company">{{item.company}}</p>
+                        <p class="period">{{item.period}}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Education Tab -->
+        <div class="education-container" *ngIf="activeTab === 'education'">
+            <div class="education-timeline">
+                <div class="education-item" *ngFor="let edu of education">
+                    <h3>{{edu.school}}</h3>
+                    <p class="degree">{{edu.degree}}</p>
+                    <p class="location">{{edu.location}}</p>
+                    <p class="period">{{edu.period}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

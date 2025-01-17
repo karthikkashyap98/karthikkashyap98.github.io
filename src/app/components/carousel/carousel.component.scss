@@ -1,0 +1,55 @@
+.project-carousel {
+    position: relative;
+    height: 100%;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+
+    .carousel-images {
+        display: flex;
+        height: 100%;
+        transition: transform 0.5s ease;
+    }
+
+    img {
+        width: 100%;
+        height: auto;
+        flex-shrink: 0;
+        height: 100%;
+        object-fit: contain !important;
+    }
+
+    .carousel-controls {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        right: 0;
+        display: flex;
+        justify-content: space-between;
+        transform: translateY(-50%);
+        pointer-events: none;
+
+        .carousel-control {
+            background: rgba(0, 0, 0, 0.5);
+            border: none;
+            color: var(--cream-muted);
+            padding: 0.5rem 1rem;
+            border-radius: 50%;
+            font-size: 1.5rem;
+            pointer-events: auto;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+
+            &:hover {
+                transform: scale(1.1);
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .carousel-control {
+        font-size: 1.2rem;
+        padding: 0.3rem 0.8rem;
+    }
+}

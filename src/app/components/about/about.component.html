@@ -1,0 +1,59 @@
+<!-- About Section -->
+<section class="about" id="about">
+  <div class="wrapper">
+
+    <!-- <div class="about-content">
+      <div class="about-text">
+        <h2>About Me</h2>
+        <p>I'm a software developer with 4 years of experience specializing in full-stack development. My expertise
+          spans
+          across JavaScript, Python, and various modern frameworks. I'm passionate about building scalable applications
+          and solving complex problems.</p>
+      </div> -->
+    <!-- <div class="tech-stack">
+        Tech stack icons will be dynamically loaded
+      </div>
+    </div> -->
+
+
+    <div class="about-container">
+      <div class="about-left">
+        <h1>About.</h1>
+        <p>I'm a software developer with 4 years of experience specializing in full-stack development. My expertise
+          spans
+          across JavaScript, Python, and various modern frameworks. I'm passionate about building scalable applications
+          and solving complex problems.</p>
+      </div>
+
+      <div class="about-right">
+        <div class="tabs">
+          <button (click)="activeTab = 'skills'" [class.active]="activeTab === 'skills'">Skills</button>
+          <button (click)="activeTab = 'experience'" [class.active]="activeTab === 'experience'">Experience</button>
+          <button (click)="activeTab = 'education'" [class.active]="activeTab === 'education'">Education</button>
+        </div>
+
+        <div class="tab-content">
+          <div *ngIf="activeTab === 'skills'">
+            <h2>Skills</h2>
+            <ul>
+              <li><strong>UI/UX:</strong> Designing Web/App interfaces</li>
+              <li><strong>Web Development:</strong> Web app Development</li>
+              <li><strong>App Development:</strong> Building Android/iOS apps</li>
+            </ul>
+          </div>
+
+          <div *ngIf="activeTab === 'experience'">
+            <app-experience></app-experience>
+          </div>
+
+          <div *ngIf="activeTab === 'education'">
+            <h2>Education</h2>
+            <p>Detail your education here.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+  </div>
+</section>

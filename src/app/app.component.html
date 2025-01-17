@@ -1,0 +1,7 @@
+<app-header [activeSection]="activeSection"></app-header>
+<div appScrollSpy [spyTargets]="['hero', 'about', 'projects', 'blogs']" (activeSection)="onSectionChange($event)">
+    <app-hero id="hero"></app-hero>
+    <app-details class="details" id="about"></app-details>
+    <app-projects id="projects"></app-projects>
+    <app-blogs id="blogs"></app-blogs>
+</div>

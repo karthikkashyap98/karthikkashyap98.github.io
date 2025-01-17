@@ -1,0 +1,9 @@
+<div class="parent">
+  <section class="timeline" id="experience">
+    <div class="timeline-item" *ngFor="let item of timelineItems; let i = index">
+      <h4>{{ item.title}}</h4>
+      <p>{{ item.company }}</p>
+      <div class="timeline-date">{{ item.date }}</div>
+    </div>
+  </section>
+</div>

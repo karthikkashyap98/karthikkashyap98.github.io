@@ -1,0 +1,89 @@
+<!-- <div class="card-container">
+  <div *ngFor="let project of projects" class="card"> -->
+<!-- Image Section -->
+<!-- <div class="card-image">
+      <img [src]="project.image" alt="{{ project.title }}" />
+    </div> -->
+
+<!-- Details Section -->
+<!-- <div class="card-details">
+      <h3 class="card-title">{{ project.title }}</h3>
+      <p class="card-description">{{ project.description }}</p>
+      <a class="card-link" href="{{ project.link }}" target="_blank">Know more</a>
+    </div>
+  </div>
+</div> -->
+
+<section class="projects">
+  <div class="wrapper">
+    <div class="projects-container">
+      <h2 class="projects-title">Projects</h2>
+
+      <!-- CryptoCrowd Project -->
+      <div class="project-card">
+        <div class="project-info">
+          <h3 class="project-title">Syncable</h3>
+          <div class="tech-stack">
+            <span class="tech-badge">AWS</span>
+            <span class="tech-badge">Angular</span>
+            <span class="tech-badge">NodeJS</span>
+            <span class="tech-badge">MongoDB</span>
+            <span class="tech-badge">Docker</span>
+          </div>
+          <p class="project-description">
+            A SaaS platform for event and studio management, enabling businesses and artists to create, manage, and
+            promote events like classes, workshops, and shows. I led its development with integrated ticketing, ABAC for
+            secure data separation, and a Dockerized CI/CD pipeline for rapid AWS deployments. The platform scaled to
+            200+ users, processing $12,000+ in transactions, with third-party integrations including SendGrid, Razorpay,
+            NewRelic, and Logz.io.
+          </p>
+          <div class="project-links">
+            <a class="project-link demo-link" href="#"
+              onclick='window.open("https://app.syncable.in");return false;'>Visit
+              Site</a>
+          </div>
+        </div>
+        <app-carousel [images]="syncableImages"></app-carousel>
+        <!-- <div class="project-carousel">
+          <div class="carousel-images">
+            <img src="assets/Landing.png" alt="Syncable Screenshot 2">
+            <img src="assets/Dashboard.jpg" alt="Syncable Screenshot 1">
+            <img src="assets/Scheduling.png" alt="Syncable Screenshot 3">
+            <img src="assets/UserFlow.png" alt="Syncable Screenshot 3">
+          </div>
+          <div class="carousel-controls">
+            <button class="carousel-control prev">❮</button>
+            <button class="carousel-control next">❯</button>
+          </div>
+        </div> -->
+      </div>
+
+      <!-- OzDevs Project -->
+      <div class="project-card">
+        <div class="project-info">
+          <h3 class="project-title">Reddit Engine: Actor Model</h3>
+          <div class="tech-stack">
+            <span class="tech-badge">Golang</span>
+            <span class="tech-badge">ProtoActor</span>
+            <span class="tech-badge">SQLite</span>
+            <span class="tech-badge">Tailwind</span>
+          </div>
+          <p class="project-description">
+            Developed a high-performance, Reddit-like app in Golang using ProtoActor, supporting 500+ concurrent users
+            and tens of thousands of interactions in 30 seconds. Built with a scalable actor-based architecture,
+            leveraging Zipf's distribution for realistic engagement, SQLite for concurrency-safe operations, and
+            seamless scalability to enterprise databases. A Main Actor managed 50+ entity actors, ensuring robust
+            concurrency, efficient task routing, and fault tolerance, highlighting advanced actor-model system design.
+          </p>
+          <div class="project-links">
+            <a href="#" onclick='window.open("https://www.youtube.com/watch?v=FcJ2qVdqxrg");return false;'
+              target="_blank" class="project-link demo-link">Demo</a>
+            <a href="#" class="project-link github-link"
+              onclick="window.open('https://github.com/karthikkashyap98/reddit-engine.git');">GitHub</a>
+          </div>
+        </div>
+        <app-carousel [images]="redditImages"></app-carousel>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,83 @@
+.blogs {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--bg-darker);
+    position: relative;
+    overflow: hidden;
+    color: var(--cream-muted);
+}
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap; // Allows cards to wrap on smaller screens
+    gap: 1rem; // Space between cards
+    justify-content: center; // Align cards horizontally
+    padding: 1rem;
+}
+
+.blog-title {
+    text-align: left;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    font-family: var(--inter-font);
+}
+
+.card {
+    cursor: pointer;
+    background-color: var(--bg-dark);
+    color: var(--cream);
+    border-radius: 0.5rem;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s;
+    margin: 0;
+    width: 100%; // Default width for small screens
+
+    &:hover {
+        transform: scale(1.03);
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    }
+
+    .card-img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+        display: block;
+    }
+
+    .card-content {
+        padding: 1rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+
+        .card-title {
+            font-family: var(--fire-font);
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .card-description {
+            font-family: var(--inter-font);
+            font-size: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .card-read-time {
+            font-family: var(--jetbrains-font);
+            font-size: 0.875rem;
+            opacity: 0.8;
+        }
+    }
+
+    @media (min-width: 768px) {
+        width: calc(33.333% - 1rem); // 3 cards per row on medium screens
+    }
+
+    @media (min-width: 1200px) {
+        width: calc(33.33% - 1rem); // 4 cards per row on large screens
+    }
+}

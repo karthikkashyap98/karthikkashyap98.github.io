@@ -1,0 +1,88 @@
+/* Variables */
+
+$gutter: 1rem; // default padding for smaller screens
+$gutter-lg: 1.5rem; // larger padding for bigger screens
+
+
+:root {
+    --bg-dark: #121212;
+    --bg-darker: #0a0a0a;
+    --cream: #f5f5dc;
+    --cream-muted: rgba(245, 245, 220, 0.8);
+    --accent: #ae9f78;
+    --gutter: #{$gutter};
+    --gutter-lg: #{$gutter-lg};
+    --fire-font: 'Fire Sans', sans-serif;
+    --inter-font: 'Inter', sans-serif;
+    --jetbrains-font: 'Jetbrains Mono', monospace;
+    --container: 69.375rem;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg-darker) !important;
+    color: var(--cream);
+    line-height: 1.6;
+    height: auto;
+}
+
+::-webkit-scrollbar {
+    width: 0.25rem;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--bg-dark);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--accent);
+}
+
+
+/* Layout */
+.wrapper {
+    padding: 0 var(--gutter);
+    max-width: var(--container);
+    width: calc(100% - var(--gutter) * 2);
+    // margin-inline: auto;
+    margin: 0;
+
+    @media (min-width: 768px) {
+        padding: 0 var(--gutter-lg);
+    }
+
+    /** 600px */
+    @media (min-width: 37.5em) {
+        width: calc(100% - var(--gutter-lg) * 3.75);
+    }
+}
+
+@keyframes glow-pulse {
+    0% {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 0.8;
+    }
+
+    50% {
+        transform: translate(-50%, -50%) scale(1.5);
+        opacity: 0.5;
+    }
+
+    100% {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 0.8;
+    }
+}

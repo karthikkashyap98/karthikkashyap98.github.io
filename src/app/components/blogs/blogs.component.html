@@ -1,0 +1,17 @@
+<section class="blogs" id="blogs">
+    <h2 class="blog-title">Blogs</h2>
+    <div class="wrapper">
+        <div class="card-container">
+            <div class="card" *ngFor="let blog of blogs" (click)="openBlog(blog)">
+                <img [src]=" blog.image" alt="Blog Image" class="card-img" />
+                <div class="card-content">
+                    <div>
+                        <h3 class="card-title">{{ blog.title }}</h3>
+                        <p class="card-description">{{ blog.description }}</p>
+                    </div>
+                    <p class="card-read-time">{{ blog.readTime }} min read</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
