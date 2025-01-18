@@ -7,6 +7,7 @@ import {
   Database,
   Layout,
   Download,
+  ExternalLink,
 } from 'angular-feather/icons';
 
 const icons = {
@@ -15,6 +16,7 @@ const icons = {
   Database,
   Layout,
   Download,
+  ExternalLink,
 };
 
 @NgModule({

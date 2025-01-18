@@ -1,6 +1,6 @@
 
 export default {
-  basePath: '/karthikkashyap98.github.io/',
+  basePath: '/',
   entryPoints: {
     '': () => import('./main.server.mjs')
   },
