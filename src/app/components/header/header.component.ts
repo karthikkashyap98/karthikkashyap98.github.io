@@ -10,6 +10,7 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
   constructor() {}
+  isMobileMenuOpen: boolean = false;
 
   ngOnInit() {
     this.activeSection = 'hero';
@@ -27,6 +28,18 @@ export class HeaderComponent implements OnInit {
     if (section) {
       // section.scrollIntoView({ behavior: 'smooth' });
       section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  }
+
+  toggleMobileMenu(): void {
+    this.isMobileMenuOpen = !this.isMobileMenuOpen;
+    document.body.classList.toggle('mobile-menu-open');
+  }
+
+  closeMobileMenu(): void {
+    if (this.isMobileMenuOpen) {
+      this.isMobileMenuOpen = false;
+      document.body.classList.remove('mobile-menu-open');
     }
   }
 }

@@ -2,27 +2,18 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    min-height: 100vh;
     background-color: var(--bg-darker);
     position: relative;
     overflow: hidden;
     color: var(--cream-muted);
-}
-
-.hero {
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    background-color: var(--bg-darker);
-    position: relative;
-    overflow: hidden;
-    color: var(--cream-muted);
+    padding: 2rem;
 }
 
 .hero-content {
-    // max-width: 1200px;
+    width: 100%;
+    max-width: 1200px;
     margin: 0 auto;
-    // padding: 0 2rem;
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 4rem;
@@ -47,47 +38,85 @@
     height: 450px;
     background: #333;
     border-radius: 10px;
+    overflow: hidden;
+}
+
+.hero-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .external-link {
     color: var(--accent);
     text-decoration: none;
     cursor: pointer;
-
-    // &:hover {
-    //     animation: pulse 0.5s ease-in-out;
-    // }
-
-    // @keyframes pulse {
-    //     0% {
-    //         transform: scale(1);
-    //     }
-
-    //     50% {
-    //         transform: scale(1.05);
-    //     }
-
-    //     100% {
-    //         transform: scale(1);
-    //     }
-    // }
-
+    display: inline-flex;
+    // align-items: center;
+    // // gap: 0.25rem;
 }
-
 
 i-feather {
     color: var(--accent);
-    margin-bottom: 1rem;
-
     width: 18px;
     height: 18px;
 }
 
-// .card {
-//     background: var(--bg-secondary);
-//     border: 1px solid var(--divider);
-//     padding: 20px;
-//     margin: 20px 0;
-//     border-radius: 10px;
-//     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
-// }
+/* Tablet Styles */
+@media screen and (max-width: 1024px) {
+    .hero-content {
+        gap: 2rem;
+    }
+
+    .hero-text h1 {
+        font-size: 2.75rem;
+    }
+
+    .hero-text p {
+        font-size: 1.1rem;
+    }
+
+    .hero-image {
+        height: 400px;
+    }
+}
+
+/* Mobile Styles */
+@media screen and (max-width: 768px) {
+    .hero {
+        margin-top: 5rem;
+        padding: 1rem;
+        min-height: auto;
+    }
+
+    .hero-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        text-align: center;
+    }
+
+    .hero-text h1 {
+        font-size: 2.25rem;
+    }
+
+    .hero-text p {
+        font-size: 1rem;
+    }
+
+    .hero-image {
+        height: 300px;
+        order: -1;
+        /* Moves image above text on mobile */
+    }
+}
+
+/* Small Mobile Styles */
+@media screen and (max-width: 480px) {
+    .hero-text h1 {
+        font-size: 2rem;
+    }
+
+    .hero-image {
+        height: 250px;
+    }
+}

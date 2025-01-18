@@ -8,6 +8,10 @@ import {
   Layout,
   Download,
   ExternalLink,
+  Github,
+  Linkedin,
+  Instagram,
+  Mail,
 } from 'angular-feather/icons';
 
 const icons = {
@@ -17,6 +21,10 @@ const icons = {
   Layout,
   Download,
   ExternalLink,
+  Github,
+  Linkedin,
+  Instagram,
+  Mail,
 };
 
 @NgModule({
