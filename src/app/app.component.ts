@@ -6,7 +6,7 @@ import { CursorGlowService } from './cursor-glow.service';
 import { ScrollSpyDirective } from './directives/scrollSpy.directive';
 import { BlogsComponent } from './components/blogs/blogs.component';
 import { DetailsComponent } from './components/details/details.component';
-import { FooterComponent } from '../../dist/browser/components/footer/footer.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 @Component({
   selector: 'app-root',
