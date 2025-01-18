@@ -28,6 +28,10 @@ export class HeaderComponent implements OnInit {
     if (section) {
       // section.scrollIntoView({ behavior: 'smooth' });
       section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      if (this.isMobileMenuOpen) {
+        this.isMobileMenuOpen = false;
+        document.body.classList.toggle('mobile-menu-open');
+      }
     }
   }
 
